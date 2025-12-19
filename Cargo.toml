@@ -1,0 +1,16 @@
+[package]
+name = "pgwire-duckdb"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+arrow-pg = "0.8"
+async-trait = "0.1"
+duckdb = { version = "1.4" }
+futures = "0.3"
+pgwire = "0.34"
+tokio = { version = "1", features = ["full"] }
+
+[features]
+default = []
+bundled = ["duckdb/bundled"]
